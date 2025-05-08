@@ -11,9 +11,9 @@ const getSum = () => {
 	sum=Array.from(prices).reduce((acc,curr)=>acc+=Number(curr.innerText),0);
 	let tr=document.createElement("tr");
 	let td= document.createElement("td");
-	td.innerText=sum;
+	td.textContent=`Total: ${sum}`;
 	tr.appendChild(td);
-	let table =document.getElementById("table");
+	let table =document.querySelector('table');
 	table.appendChild(tr)
   
 };
